@@ -18,6 +18,21 @@ if(!defined("ABSPATH")){
 if (!class_exists("SWKEContactPlugin")){
 
     class SWKEContactPlugin{
-        
+
+        public function __construct()
+        {
+            // plugin path constant
+            define("My_Plugin_Path", plugin_dir_path(__FILE__));
+
+            require_once( My_Plugin_Path .'/vendor/autoload.php');
+        }
+
+        public function init(){
+
+        }
     }
+
+    // instantiate the plugin
+    $contact_plugin = new SWKEContactPlugin();
+    $contact_plugin ->init();
 }
