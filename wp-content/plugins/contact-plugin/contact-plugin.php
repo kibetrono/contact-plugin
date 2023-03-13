@@ -28,7 +28,9 @@ if (!class_exists("SWKEContactPlugin")){
         }
 
         public function init(){
-
+            include_once My_Plugin_Path .'/includes/utilities.php';
+            include_once My_Plugin_Path .'/includes/options-page.php';
+            include_once My_Plugin_Path .'/includes/contact-form.php';
         }
     }
 
